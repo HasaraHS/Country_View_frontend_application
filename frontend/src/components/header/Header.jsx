@@ -1,6 +1,9 @@
 import "../header/Header.css";
 import { useContext } from "react";
 import Slider from "../../utils/slider/Slider";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { BsWhatsapp } from "react-icons/bs";
 import { MyContext } from "../../context/AppContext";
 
 const contentData = [
@@ -72,8 +75,11 @@ const Header = () => {
             <div>
                 <Slider/>
             </div>
-            <div>
-                slider icon here
+            <div className="flex gap-4 text-xl text-white absolute bottom-[-30px] right-[50px]">
+                <FaYoutube className="hover:cursor-pointer hover:text-[#00A1B9]"/>
+                <FiInstagram className="hover:cursor-pointer hover:text-[#00A1B9]"/>
+                <BsWhatsapp className="hover:cursor-pointer hover:text-[#00A1B9]"/>
+                <FaFacebook className="hover:cursor-pointer hover:text-[#00A1B9]"/>
             </div>
             </div>
         </div>
