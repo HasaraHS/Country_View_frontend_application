@@ -28,7 +28,7 @@ const Home = () => {
   const classChange = handleClass(activeSlideIndex);
 
   return (
-    <div className={`${classChange} h-[800px] overflow-hidden`} id="home">
+    <div className={`${classChange} md:h-screen h-[1080px] overflow-hidden`} id="home">
       <Navbar/>
       <Header/>
     </div>
