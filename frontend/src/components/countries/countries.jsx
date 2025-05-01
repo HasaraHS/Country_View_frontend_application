@@ -130,7 +130,7 @@ const CountriesPage = () => {
 
       {/* Foreground Content */}
       <div className="content">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-4">
           {/* Heading */}
           <div className="w-full md:w-auto">
             <h3 className="text-xl font-bold text-white font-Montserrat text-center md:text-left">
@@ -149,7 +149,7 @@ const CountriesPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {suggestions.length > 0 && (
-                <div className="absolute z-10 mt-1 bg-white text-black rounded-lg shadow-lg w-full max-h-60 overflow-y-auto"  style={{ zIndex: 9999 }}>
+                <div className="absolute z-10 mt-1 bg-white text-black rounded-lg shadow-lg w-full max-h-60 overflow-y-auto" style={{ zIndex: 9999 }}>
                   {suggestions.slice(0, 10).map((country) => (
                     <div
                       key={country.cca3}
