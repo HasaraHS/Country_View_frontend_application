@@ -4,6 +4,7 @@ import "../home/Home.css"
 import { useContext } from "react";
 import { MyContext } from "../../context/AppContext";
 
+
 const Home = () => {
 
   const {activeSlideIndex} = useContext(MyContext);
