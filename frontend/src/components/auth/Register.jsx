@@ -71,6 +71,7 @@ const Register = () => {
       .then(result => {
         alert("Registered successfully")
         navigate('/login')
+        console.log(result)
 
       })
       .catch((err) => {
@@ -84,18 +85,18 @@ const Register = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-end"
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${global})` }}
     >
       <ToastContainer />
 
-      <div className="w-full md:w-1/2 backdrop-blur-xl bg-white/10 p-5 md:p-10 rounded-3xl shadow-3xl m-5">
-        <h2 className="text-3xl font-bold text-white text-center mb-6 font-Montserrat">
+      <div className="w-full md:w-1/2 backdrop-blur-xl bg-white/30 p-5 md:p-10 rounded-3xl drop-shadow-2xl m-5 ">
+        <h2 className="text-3xl font-bold text-blue-950 text-center mb-6 font-Montserrat">
           Create Your Country View Pass
         </h2>
 
-        <form className="space-y-5 text-white" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+        <form className="space-y-5 text-blue-950" onSubmit={handleSubmit}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
             <div>
               <label className="text-sm font-semibold">
                 First Name <span className="text-red-500">*</span>
@@ -104,13 +105,13 @@ const Register = () => {
                 type="text"
                 name="fname"
                 placeholder="Enter First Name"
-                className="w-full p-3 border border-amber-50 rounded-lg text-white"
+                className="w-full p-3 border border-black rounded-lg text-blue-950"
                 onChange={(e) =>
                   setFormData({ ...formData, fname: e.target.value })
                 }
               />
               {errors.fname && (
-                <p className="text-red-400 text-sm mt-1">{errors.fname}</p>
+                <p className="text-red-800 text-sm mt-1">{errors.fname}</p>
               )}
             </div>
 
@@ -122,13 +123,13 @@ const Register = () => {
                 type="text"
                 name="lname"
                 placeholder="Enter Last Name"
-                className="w-full p-3 border rounded-lg border-amber-50 text-white"
+                className="w-full p-3 border rounded-lg border-black text-blue-950"
                 onChange={(e) =>
                   setFormData({ ...formData, lname: e.target.value })
                 }
               />
               {errors.lname && (
-                <p className="text-red-400 text-sm mt-1">{errors.lname}</p>
+                <p className="text-red-800 text-sm mt-1">{errors.lname}</p>
               )}
             </div>
 
@@ -140,13 +141,13 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Enter Email"
-                className="w-full p-3 border rounded-lg border-amber-50 text-white"
+                className="w-full p-3 border rounded-lg border-black text-blue-950"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
               />
               {errors.email && (
-                <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                <p className="text-red-800 text-sm mt-1">{errors.email}</p>
               )}
             </div>
 
@@ -158,13 +159,13 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Enter Password"
-                className="w-full p-3 border rounded-lg border-amber-50 text-white"
+                className="w-full p-3 border rounded-lg border-black text-blue-950"
                 onChange={(e) =>
                   setFormData({ ...formData, password: e.target.value })
                 }
               />
               {errors.password && (
-                <p className="text-red-400 text-sm mt-1">{errors.password}</p>
+                <p className="text-red-800 text-sm mt-1">{errors.password}</p>
               )}
             </div>
 
@@ -176,7 +177,7 @@ const Register = () => {
                 type="password"
                 name="confirmPassword"
                 placeholder="Confirm Password"
-                className="w-full p-3 border rounded-lg border-amber-50 text-white"
+                className="w-full p-3 border rounded-lg border-black text-blue-950"
                 onChange={(e) =>
                   setFormData({
                     ...formData,
@@ -185,26 +186,25 @@ const Register = () => {
                 }
               />
               {errors.confirmPassword && (
-                <p className="text-red-400 text-sm mt-1">
+                <p className="text-red-800 text-sm mt-1">
                   {errors.confirmPassword}
                 </p>
               )}
             </div>
           </div>
 
+          <div className="flex justify-center">
           <button
-            type="submit"
-            className="w-full bg-white text-black p-3 rounded-lg font-semibold hover:bg-cyan-800 hover:text-white transition duration-300"
-          >
+          type="submit"
+           className="w-1/2 bg-white text-black p-3 rounded-lg font-bold hover:bg-cyan-800 hover:text-white transition duration-300">
             Sign Up Now
-          </button>
-
+             </button>
+          </div>
           <p className="text-center text-white mt-4">
             Already have an account?{' '}
             <Link
               to="/login"
-              className="text-white font-bold hover:text-cyan-100"
-            >
+              className="text-blue-950 font-bold hover:text-cyan-100" >
               Login Now
             </Link>
           </p>
