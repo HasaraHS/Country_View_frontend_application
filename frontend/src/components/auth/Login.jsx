@@ -51,6 +51,9 @@ const Login = () => {
             setErrors({ password: 'Incorrect password' });
             return;
           }
+          
+         // Set login state in localStorage
+         localStorage.setItem("isLoggedIn", "true");
 
           toast.success("Login successful!", { position: 'top-right' });
           setTimeout(() => navigate("/"), 1000);

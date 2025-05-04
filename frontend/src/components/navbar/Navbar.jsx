@@ -1,15 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
   const menus = [
     { title: "Home", url: "/" },
     { title: "Map", url: "/countries" },
     { title: "About Us", url: "/about" },
-    { title: "Login", url: "/login" },
+    // Only show login if not logged in
+    ...(!isLoggedIn ? [{ title: "Login", url: "/login" }] : []),
   ];
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  };
 
   return (
     <div>
@@ -22,7 +31,7 @@ const Navbar = () => {
           </h4>
         </Link>
 
-        {/* Menu + Search */}
+        {/* Menu + Logout */}
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto justify-between">
           <div className="bg-[#4A8087] bg-opacity-90 py-2 px-6 md:px-[80px] rounded-[20px] md:rounded-[40px] flex flex-col md:flex-row items-center gap-4">
             <ul className="flex flex-wrap justify-center md:flex-nowrap text-white text-[12px] md:text-[14px] font-bold uppercase gap-6 md:gap-[60px]">
@@ -39,6 +48,18 @@ const Navbar = () => {
                 ))
               ) : (
                 <li className="text-gray-300 text-sm italic">No results found</li>
+              )}
+
+              {/* Show Logout if logged in */}
+              {isLoggedIn && (
+                <li>
+                  <button
+                    onClick={handleLogout}
+                    className="text-white text-[12px] md:text-[14px] font-bold uppercase hover:text-red-300 transition duration-150"
+                  >
+                    Logout
+                  </button>
+                </li>
               )}
             </ul>
           </div>
