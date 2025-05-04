@@ -8,6 +8,7 @@ const Navbar = () => {
     { title: "Home", url: "/" },
     { title: "Map", url: "/countries" },
     { title: "About Us", url: "/about" },
+    { title: "Login", url: "/login" },
   ];
 
   return (
