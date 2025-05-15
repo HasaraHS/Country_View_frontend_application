@@ -8,4 +8,5 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
+  base: import.meta.env.VITE_BASE_PATH || "/Country_View_frontend_application"
 })
