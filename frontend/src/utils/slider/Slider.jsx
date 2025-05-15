@@ -5,7 +5,7 @@ import "../slider/Slider.css"
 import { useRef, useContext, useEffect } from 'react';
 import { MyContext } from '../../context/AppContext';
 import { Pagination } from 'swiper/modules';         
-import sigiriya from "../../assets/sigiriya.jpg";
+import sigiriya from "../../assets/Sigiriya.jpg";
 import operaHouse from "../../assets/OperaHouse.jpg";
 import fuji from "../../assets/Fuji.jpg";
 import Kandersteg from "../../assets/Kandersteg.jpg";
