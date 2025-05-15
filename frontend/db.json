@@ -1,20 +1,20 @@
 {
   "users": [
     {
-      "id": "ba8a",
-      "fname": "Helani",
-      "lname": "Hasara",
-      "email": "hasaragr1920@gmail.com",
-      "password": "$2b$10$NdJD/aGXaz5LI2XDYIg8oua.4BvAxR8FtazGCQTznhaHX.rExgKFa",
-      "confirmPassword": "$2b$10$NdJD/aGXaz5LI2XDYIg8oua.4BvAxR8FtazGCQTznhaHX.rExgKFa"
-    },
-    {
       "id": "048d",
       "fname": "Helani",
       "lname": "Hasara",
       "email": "hasaragr@gmail.com",
       "password": "$2b$10$d6bZdPEf9ziZtwf.h2P8ounTu9kx./puQDkbiTppgyCFLurwoAv0.",
       "confirmPassword": "$2b$10$d6bZdPEf9ziZtwf.h2P8ounTu9kx./puQDkbiTppgyCFLurwoAv0."
+    },
+    {
+      "id": "dffe",
+      "fname": "Helani",
+      "lname": "Hasara",
+      "email": "hasaragr1920@gmail.com",
+      "password": "$2b$10$BqAu9CnrMjCwrDm7JIhvAelOHMyknGP9NrNjQa2F0i/cvldLC.G3O",
+      "confirmPassword": "$2b$10$BqAu9CnrMjCwrDm7JIhvAelOHMyknGP9NrNjQa2F0i/cvldLC.G3O"
     }
   ]
 }
